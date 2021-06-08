@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/formulario.css">
+    <script src="js/formulario.js"></script>
+</head>
+
+<body>
+    <main class="contenedor">
+        <div class="formulario">
+            <form class="suscripcion" id="form" name="miformaulario">
+                <div>
+                    <input type="text" maxlength="20" onchange="validaNombre()" class="input-box-nombre" placeholder="Ingresa tu Nombre " id="nombre" autocomplete="off" autofocus required>
+                </div>
+                <input type="text" maxlength="20" onchange="validaPaterno()" class="input-box" placeholder="Apellido Paterno" id="paterno"  autocomplete="off" required>
+                <input type="text" maxlength="20" onchange="validaMaterno()" class="input-box" placeholder="Apellido Materno" id="materno"  autocomplete="off" required>
+                <input type="email" onchange="validaCorreo()" class="input-box" placeholder="Email" id="email" autocomplete="off" required>
+                <input type="tel" onchange="validaTelefono()" class="input-box" placeholder="Teléfono" id="telefono" autocomplete="off" required>
+                <div>
+                    <input type="text" class="input-box-direccion" placeholder="Dirección " id="direccion" autocomplete="off">
+                </div>
+                <div id="terminos">
+                    <strong><p>Terminos y Condiciones</p></strong>
+                    <strong><p>Politicas de Privacidad</p></strong>
+                </div>
+                <div class="boton">
+                    <input type="submit" class="boton-enviar" onclick="guardaFormulario()" value="Envía Información"></input>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
